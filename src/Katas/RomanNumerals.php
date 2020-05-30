@@ -2,6 +2,8 @@
 
 namespace Katas;
 
+use Katas\Contracts\Executable;
+
 class RomanNumerals extends Kata implements Executable
 {
     /**

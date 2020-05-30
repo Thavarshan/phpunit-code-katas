@@ -3,6 +3,7 @@
 namespace Katas;
 
 use InvalidArgumentException;
+use Katas\Contracts\Executable;
 
 class StringCalculator extends Kata implements Executable
 {
