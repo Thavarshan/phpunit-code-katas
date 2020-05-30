@@ -2,7 +2,9 @@
 
 namespace Katas;
 
-class BowlingGame extends Kata
+use Katas\Contracts\Executable;
+
+class BowlingGame extends Kata implements Executable
 {
     /**
      * The number of frames in a game.
@@ -15,6 +17,16 @@ class BowlingGame extends Kata
      * @var array
      */
     protected array $rolls = [];
+
+    /**
+     * {@inheritDoc}
+     */
+    public function execute($argument)
+    {
+        $this->roll($argument);
+
+        return $this->score();
+    }
 
     /**
      * Roll the ball.

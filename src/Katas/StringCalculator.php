@@ -4,7 +4,7 @@ namespace Katas;
 
 use InvalidArgumentException;
 
-class StringCalculator extends Kata
+class StringCalculator extends Kata implements Executable
 {
     /**
      * The mamximum number allowed to be calculated.
@@ -17,6 +17,14 @@ class StringCalculator extends Kata
      * @var string
      */
     protected $delimeter = ",|\n";
+
+    /**
+     * {@inheritDoc}
+     */
+    public function execute($argument)
+    {
+        return $this->add($argument);
+    }
 
     /**
      * Sum up the given string as integers.

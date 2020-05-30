@@ -2,7 +2,7 @@
 
 namespace Katas;
 
-class PrimeFactors extends Kata
+class PrimeFactors extends Kata implements Executable
 {
     /**
      * The primefactors generated for the given number.
@@ -19,7 +19,18 @@ class PrimeFactors extends Kata
     protected $divisor = 2;
 
     /**
-     * {@inheritdoc}
+     * {@inheritDoc}
+     */
+    public function execute($argument)
+    {
+        return $this->generate($argument);
+    }
+
+    /**
+     * Generate prime factors of given numbers.
+     *
+     * @param integer $number
+     * @return array
      */
     public function generate(int $number): array
     {

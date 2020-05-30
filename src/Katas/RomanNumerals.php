@@ -2,7 +2,7 @@
 
 namespace Katas;
 
-class RomanNumerals extends Kata
+class RomanNumerals extends Kata implements Executable
 {
     /**
      * Numeral symbol lookup.
@@ -24,7 +24,18 @@ class RomanNumerals extends Kata
     ];
 
     /**
-     * {@inheritdoc}
+     * {@inheritDoc}
+     */
+    public function execute($argument)
+    {
+        return $this->generate($argument);
+    }
+
+    /**
+     * Generate respective roman numeral representation of given number.
+     *
+     * @param integer $number
+     * @return string
      */
     public function generate(int $number)
     {
