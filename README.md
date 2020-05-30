@@ -25,7 +25,7 @@ Begin by cloning this repository to your machine, and installing all Composer  d
 ### Get Started
 
 ```bash
-git clone https://github.com/Thavarshan/katas.git
+git clone git@github.com:Thavarshan/phpunit-code-katas.git katas
 cd katas && composer install
 ```
 

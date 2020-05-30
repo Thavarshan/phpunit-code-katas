@@ -1,6 +1,7 @@
 {
     "name": "thavarshan/code-katas",
     "description": "Code Katas with PHPUnit",
+    "type": "package",
     "require": {
         "php": "^7.3",
         "ext-json": "*",
