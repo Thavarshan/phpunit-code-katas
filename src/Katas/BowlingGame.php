@@ -21,9 +21,9 @@ class BowlingGame extends Kata implements Executable
     /**
      * {@inheritDoc}
      */
-    public function execute($argument)
+    public function execute(...$arguments)
     {
-        $this->roll($argument);
+        $this->roll($arguments[0]);
 
         return $this->score();
     }

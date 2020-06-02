@@ -22,9 +22,9 @@ class StringCalculator extends Kata implements Executable
     /**
      * {@inheritDoc}
      */
-    public function execute($argument)
+    public function execute(...$arguments)
     {
-        return $this->add($argument);
+        return $this->add($arguments[0]);
     }
 
     /**

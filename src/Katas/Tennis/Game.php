@@ -36,9 +36,17 @@ class Game extends Kata implements Executable
     /**
      * {@inheritdoc}
      */
-    public function execute($argument)
+    public function execute(...$arguments)
     {
-        //
+        for ($i = 0; $i < $arguments[0]; $i++) {
+            $this->pointTo($john->getName());
+        }
+
+        for ($i = 0; $i < $arguments[1]; $i++) {
+            $this->pointTo($jane->getName());
+        }
+
+        $this->assertEquals($arguments[2], $game->score());
     }
 
     /**

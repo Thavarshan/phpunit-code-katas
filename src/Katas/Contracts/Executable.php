@@ -7,8 +7,8 @@ interface Executable
     /**
      * Make class compatible to a single executable method.
      *
-     * @param mixed $argument
+     * @param mixed $arguments
      * @return void
      */
-    public function execute($argument);
+    public function execute(...$arguments);
 }

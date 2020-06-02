@@ -28,9 +28,9 @@ class RomanNumerals extends Kata implements Executable
     /**
      * {@inheritDoc}
      */
-    public function execute($argument)
+    public function execute(...$arguments)
     {
-        return $this->generate($argument);
+        return $this->generate($arguments[0]);
     }
 
     /**

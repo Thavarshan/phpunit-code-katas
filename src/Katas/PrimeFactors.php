@@ -23,9 +23,9 @@ class PrimeFactors extends Kata implements Executable
     /**
      * {@inheritDoc}
      */
-    public function execute($argument)
+    public function execute(...$arguments)
     {
-        return $this->generate($argument);
+        return $this->generate($argument[0]);
     }
 
     /**
