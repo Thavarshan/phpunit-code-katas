@@ -13,3 +13,11 @@ The object of the game is to maneuver the ball in such a way that the opponent i
 4. If at least three points have been scored by each side and a player has one more point that his opponent, the score of the game is "advantage" for the player in the lead.
 
 ## Process
+
+1. Check if either player has a score enough to be declared a winner.
+2. If so get the name of the player and pass on as winner of the match.
+3. If not continue with the game by checking to see if either player has an advantage over the other.
+4. If so determine which player has an advantage over the other and pass on as player with advantage.
+5. Check if the score between the two players are deuce.
+6. If so show the score as "deuce".
+7. If not show the score according to respective terms of the points.
