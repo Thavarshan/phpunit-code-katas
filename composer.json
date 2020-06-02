@@ -6,7 +6,8 @@
         "php": "^7.3",
         "ext-json": "*",
         "symfony/var-dumper": "^5.0",
-        "phpunit/phpunit": "^8.4|^9.0"
+        "phpunit/phpunit": "^8.4|^9.0",
+        "ext-dom": "20031129"
     },
     "autoload": {
         "psr-4": {
