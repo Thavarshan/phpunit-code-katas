@@ -2,7 +2,7 @@
 
 ## Definition
 
-Roman numerals are a system of numbers where numbers are represented by a combination of letters,
+Roman numerals are a system of numbers where numbers are represented by a combination of letters.
 
 ## Process
 
