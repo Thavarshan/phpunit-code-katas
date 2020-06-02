@@ -24,13 +24,13 @@ class Game extends Kata implements Executable
     /**
      * Create new match instance.
      *
-     * @param Player $playerOne
-     * @param Player $playerTwo
+     * @param \Katas\Tennis\Player|null $playerOne
+     * @param \Katas\Tennis\Player|null $playerTwo
      */
-    public function __construct(Player $playerOne, Player $playerTwo)
+    public function __construct(?Player $playerOne = null, ?Player $playerTwo = null)
     {
-        $this->playerOne = $playerOne;
-        $this->playerTwo = $playerTwo;
+        $this->playerOne = $playerOne ?? new Player('John');
+        $this->playerTwo = $playerTwo ?? new Player('Jane');
     }
 
     /**
@@ -39,14 +39,14 @@ class Game extends Kata implements Executable
     public function execute(...$arguments)
     {
         for ($i = 0; $i < $arguments[0]; $i++) {
-            $this->pointTo($john->getName());
+            $this->pointTo($this->playerOne->getName());
         }
 
         for ($i = 0; $i < $arguments[1]; $i++) {
-            $this->pointTo($jane->getName());
+            $this->pointTo($this->playerTwo->getName());
         }
 
-        $this->assertEquals($arguments[2], $game->score());
+        return $this->score();
     }
 
     /**
