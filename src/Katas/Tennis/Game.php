@@ -38,6 +38,8 @@ class Game extends Kata implements Executable
      */
     public function execute(...$arguments)
     {
+        $arguments = $arguments[0];
+
         for ($i = 0; $i < $arguments[0]; $i++) {
             $this->pointTo($this->playerOne->getName());
         }
