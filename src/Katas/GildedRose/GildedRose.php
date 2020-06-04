@@ -26,6 +26,8 @@ class GildedRose extends Kata implements Executable
      */
     public function execute(...$arguments)
     {
+        $arguments = $arguments[0];
+
         $item = self::of($arguments[0], $arguments[1], $arguments[2]);
 
         $item->tick();
