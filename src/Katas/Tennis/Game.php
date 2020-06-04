@@ -172,22 +172,14 @@ class Game extends Kata implements Executable
             case 0:
                 return 'love';
 
-                break;
-
             case 1:
                 return 'fifteen';
-
-                break;
 
             case 2:
                 return 'thirty';
 
-                break;
-
             case 3:
                 return 'forty';
-
-                break;
         }
     }
 }
