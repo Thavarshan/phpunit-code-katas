@@ -49,7 +49,7 @@ class StringCalculatorTest extends TestCase
     }
 
     /** @test */
-    public function negatice_numbers_are_not_allowed()
+    public function negative_numbers_are_not_allowed()
     {
         $this->expectException(InvalidArgumentException::class);
 
