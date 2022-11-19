@@ -17,18 +17,19 @@ class FizzBuzz extends Kata implements Executable
     /**
      * Give appropriate term of number being checked.
      *
-     * @param  int    $number
+     * @param int $number
+     *
      * @return string
      */
     public function convert(int $number): string
     {
         $result = '';
 
-        if ($number % 3 === 0) {
+        if (0 === $number % 3) {
             $result .= 'Fizz';
         }
 
-        if ($number % 5 === 0) {
+        if (0 === $number % 5) {
             $result .= 'Buzz';
         }
 

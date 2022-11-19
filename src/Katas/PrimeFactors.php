@@ -31,7 +31,8 @@ class PrimeFactors extends Kata implements Executable
     /**
      * Generate prime factors of given numbers.
      *
-     * @param integer $number
+     * @param int $number
+     *
      * @return array
      */
     public function generate(int $number): array

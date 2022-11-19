@@ -9,7 +9,7 @@ class BowlingGame extends Kata implements Executable
     /**
      * The number of frames in a game.
      */
-    const FRAMES_PER_GAME = 10;
+    public const FRAMES_PER_GAME = 10;
 
     /**
      * All rolls for the game.
@@ -31,7 +31,8 @@ class BowlingGame extends Kata implements Executable
     /**
      * Roll the ball.
      *
-     * @param  int  $pins
+     * @param int $pins
+     *
      * @return void
      */
     public function roll(int $pins): void
@@ -53,7 +54,7 @@ class BowlingGame extends Kata implements Executable
             if ($this->isStrike($roll)) {
                 $score += $this->pinCount($roll) + $this->strikeBonus($roll);
 
-                $roll += 1;
+                ++$roll;
 
                 continue;
             }
@@ -73,29 +74,32 @@ class BowlingGame extends Kata implements Executable
     /**
      * Determine if the current roll was a strike.
      *
-     * @param  int  $roll
+     * @param int $roll
+     *
      * @return bool
      */
     protected function isStrike(int $roll): bool
     {
-        return $this->pinCount($roll) === 10;
+        return 10 === $this->pinCount($roll);
     }
 
     /**
      * Determine if the current frame was a spare.
      *
-     * @param  int  $roll
+     * @param int $roll
+     *
      * @return bool
      */
     protected function isSpare(int $roll): bool
     {
-        return $this->defaultFrameScore($roll) === 10;
+        return 10 === $this->defaultFrameScore($roll);
     }
 
     /**
      * Calculate the score for the frame.
      *
-     * @param  int  $roll
+     * @param int $roll
+     *
      * @return int
      */
     protected function defaultFrameScore(int $roll): int
@@ -106,7 +110,8 @@ class BowlingGame extends Kata implements Executable
     /**
      * Get the bonus for a strike.
      *
-     * @param  int  $roll
+     * @param int $roll
+     *
      * @return int
      */
     protected function strikeBonus(int $roll): int
@@ -117,7 +122,8 @@ class BowlingGame extends Kata implements Executable
     /**
      * Get the bonus for a spare.
      *
-     * @param  int  $roll
+     * @param int $roll
+     *
      * @return int
      */
     protected function spareBonus(int $roll): int
@@ -128,7 +134,8 @@ class BowlingGame extends Kata implements Executable
     /**
      * Get the number of pins knocked down for the given roll.
      *
-     * @param  int  $roll
+     * @param int $roll
+     *
      * @return int
      */
     protected function pinCount(int $roll): int

@@ -9,7 +9,7 @@ class RomanNumerals extends Kata implements Executable
     /**
      * Numeral symbol lookup.
      */
-    const NUMERALS = [
+    public const NUMERALS = [
         'M' => 1000,
         'CM' => 900,
         'D' => 500,
@@ -36,7 +36,8 @@ class RomanNumerals extends Kata implements Executable
     /**
      * Generate respective roman numeral representation of given number.
      *
-     * @param integer $number
+     * @param int $number
+     *
      * @return string
      */
     public function generate(int $number)

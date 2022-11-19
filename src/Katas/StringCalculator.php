@@ -10,7 +10,7 @@ class StringCalculator extends Kata implements Executable
     /**
      * The mamximum number allowed to be calculated.
      */
-    const MAX_NUMBER_ALLOWED = 1000;
+    public const MAX_NUMBER_ALLOWED = 1000;
 
     /**
      * Acceptable delimeters.
@@ -31,6 +31,7 @@ class StringCalculator extends Kata implements Executable
      * Sum up the given string as integers.
      *
      * @param string $numbers
+     *
      * @return int
      *
      * @throws \InvalidArgumentException
@@ -48,7 +49,8 @@ class StringCalculator extends Kata implements Executable
     /**
      * Identify and parse given parameter.
      *
-     * @param  string $numbers
+     * @param string $numbers
+     *
      * @return array
      */
     protected function parseString(string $numbers): array
@@ -73,7 +75,8 @@ class StringCalculator extends Kata implements Executable
     /**
      * Determine if geven array of numbers are positive integers.
      *
-     * @param  array   $numbers
+     * @param array $numbers
+     *
      * @return \Katas\StringCalculator
      */
     protected function disallowNegativeNumbers(array $numbers): StringCalculator
@@ -90,9 +93,10 @@ class StringCalculator extends Kata implements Executable
     }
 
     /**
-     * Determine if each integer in the given array is below 1000
+     * Determine if each integer in the given array is below 1000.
      *
-     * @param  array  $numbers
+     * @param array $numbers
+     *
      * @return array
      */
     protected function ignoreGreateThanOneThousand(array $numbers): array
